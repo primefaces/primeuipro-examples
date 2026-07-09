@@ -1,0 +1,33 @@
+.taskboard-swimlane-column-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8125rem;
+}
+
+.taskboard-swimlane-column-header .p-tag {
+    flex-shrink: 0;
+}
+
+.taskboard-swimlane-column-header-title {
+    font-weight: 600;
+    color: var(--p-taskboard-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.taskboard-swimlane-column-header-lock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    color: var(--p-taskboard-empty-color);
+}
+
+.taskboard-swimlane-column-header-lock svg {
+    flex: 0 0 auto;
+}

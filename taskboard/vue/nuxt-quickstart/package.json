@@ -1,0 +1,31 @@
+{
+    "name": "primeui-taskboard-nuxt-quickstart",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "packageManager": "pnpm@10.18.2",
+    "scripts": {
+        "dev": "nuxt dev",
+        "build": "nuxt build",
+        "preview": "nuxt preview",
+        "typecheck": "nuxt typecheck",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@primeui/license-manager": "^1.0.0-rc.1",
+        "@primeui/taskboard-style": "1.0.0-rc.1",
+        "@primeui/vue-taskboard": "1.0.0-rc.1",
+        "@primeuix/themes": "3.0.0-rc.1",
+        "nuxt": "^4.4.8",
+        "primeicons": "^7.0.0",
+        "primevue": "5.0.0-rc.2",
+        "vue": "^3.5.39"
+    },
+    "devDependencies": {
+        "@primevue/nuxt-module": "5.0.0-rc.2",
+        "@tailwindcss/vite": "^4.3.1",
+        "tailwindcss": "^4.3.1",
+        "typescript": "^5.9.3",
+        "vue-tsc": "^3.3.5"
+    }
+}
