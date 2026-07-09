@@ -4,20 +4,20 @@ Quickstart examples for PrimeUI Pro components.
 
 ## Structure
 
-Examples are grouped by component first, then framework, then starter type:
+Examples are grouped by component first, then framework, then quickstart app:
 
 ```text
-{component}/{framework}/{starter}
+{component}/{framework}/{quickstart}
 ```
 
 Examples:
 
 ```text
-scheduler/vue/vite
-scheduler/vue/nuxt-tailwind
-texteditor/vue/vite
-taskboard/vue/nuxt
-chart/vue/vite-tailwind
+scheduler/vue/vite-quickstart
+scheduler/vue/nuxt-tailwind-quickstart
+texteditor/vue/vite-quickstart
+taskboard/vue/nuxt-quickstart
+chart/vue/vite-tailwind-quickstart
 ```
 
 ## Components
@@ -29,11 +29,11 @@ chart/vue/vite-tailwind
 
 ## Current Matrix
 
-Vue starter folders are reserved for the first runnable examples:
+Vue quickstart folders are reserved for the first runnable examples:
 
-- Vite
-- Nuxt
-- Vite + Tailwind
-- Nuxt + Tailwind
+- Vite quickstart
+- Nuxt quickstart
+- Vite + Tailwind quickstart
+- Nuxt + Tailwind quickstart
 
 React and Angular folders are intentionally present as placeholders for future quickstarts.

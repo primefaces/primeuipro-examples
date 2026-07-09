@@ -3,7 +3,7 @@
   "frameworks": {
     "vue": {
       "status": "active",
-      "starters": ["vite", "nuxt", "vite-tailwind", "nuxt-tailwind"]
+      "starters": ["vite-quickstart", "nuxt-quickstart", "vite-tailwind-quickstart", "nuxt-tailwind-quickstart"]
     },
     "react": {
       "status": "planned",

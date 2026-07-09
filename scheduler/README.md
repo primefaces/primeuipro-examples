@@ -4,10 +4,10 @@ PrimeUI Pro Scheduler quickstarts.
 
 ## Vue
 
-- `vue/vite`
-- `vue/nuxt`
-- `vue/vite-tailwind`
-- `vue/nuxt-tailwind`
+- `vue/vite-quickstart`
+- `vue/nuxt-quickstart`
+- `vue/vite-tailwind-quickstart`
+- `vue/nuxt-tailwind-quickstart`
 
 ## Planned
 
