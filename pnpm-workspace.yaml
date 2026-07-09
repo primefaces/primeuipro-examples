@@ -1,0 +1,5 @@
+packages:
+  - "scheduler/*/*"
+  - "texteditor/*/*"
+  - "taskboard/*/*"
+  - "chart/*/*"

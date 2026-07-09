@@ -1,0 +1,17 @@
+{
+  "components": ["scheduler", "texteditor", "taskboard", "chart"],
+  "frameworks": {
+    "vue": {
+      "status": "active",
+      "starters": ["vite", "nuxt", "vite-tailwind", "nuxt-tailwind"]
+    },
+    "react": {
+      "status": "planned",
+      "starters": []
+    },
+    "angular": {
+      "status": "planned",
+      "starters": []
+    }
+  }
+}
