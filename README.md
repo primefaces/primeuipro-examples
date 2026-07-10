@@ -13,12 +13,14 @@ Each quickstart is a standalone application that shows the package installation,
 | [TaskBoard](./taskboard) | [Nuxt](./taskboard/vue/nuxt-quickstart) | Planned | Planned |
 | [Charts](./chart) | Planned | Planned | Planned |
 
-The React and Angular directories are placeholders for upcoming framework examples. A folder is listed as available only when it contains a runnable application and its own README.
+The React and Angular directories are placeholders for upcoming framework examples. Future React quickstarts will use [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter), and future Angular quickstarts will use [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter) as their framework UI baselines. A folder is listed as available only when it contains a runnable application and its own README.
 
 ## Documentation
 
 - [PrimeUI Pro](https://primeuipro.dev/) - product and framework overview
 - [PrimeUI Pro for Vue](https://vue.primeuipro.dev/) - Vue component documentation and live examples
+- [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter) - React framework source for upcoming quickstarts
+- [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter) - Angular framework source for upcoming quickstarts
 - [Scheduler for Vue](https://vue.primeuipro.dev/scheduler)
 - [TextEditor for Vue](https://vue.primeuipro.dev/texteditor)
 - [TaskBoard for Vue](https://vue.primeuipro.dev/taskboard)

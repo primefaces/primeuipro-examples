@@ -15,6 +15,6 @@ The planned Vue applications are:
 - `vue/vite-tailwind-quickstart`
 - `vue/nuxt-tailwind-quickstart`
 
-React and Angular quickstarts are also planned. Their directories are placeholders until runnable examples are added.
+React quickstarts will use [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter). Angular quickstarts will use [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter). Their directories are placeholders until runnable examples are added.
 
 [Return to all PrimeUI Pro examples](../README.md).

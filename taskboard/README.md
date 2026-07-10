@@ -13,8 +13,8 @@ Quickstarts for building kanban and swimlane workflows with PrimeUI Pro TaskBoar
 - `vue/vite-quickstart`
 - `vue/vite-tailwind-quickstart`
 - `vue/nuxt-tailwind-quickstart`
-- `react`
-- `angular`
+- `react` using [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter)
+- `angular` using [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter)
 
 Planned directories are placeholders until runnable applications and setup instructions are added.
 
