@@ -11,7 +11,7 @@ onMounted(initializeTheme);
                 <img src="/primeuipro-logo-black.svg" width="105" height="20" alt="PrimeUI Pro" class="h-5 w-auto dark:hidden" />
                 <img src="/primeuipro-logo-white.svg" width="105" height="20" alt="" class="hidden h-5 w-auto dark:block" aria-hidden="true" />
                 <span class="hidden h-4 w-px bg-[var(--app-border)] sm:block" aria-hidden="true" />
-                <span class="hidden truncate text-sm font-medium text-[var(--app-text-muted)] sm:block">TaskBoard - Nuxt</span>
+                <span class="hidden truncate text-sm font-medium text-[var(--app-text-muted)] sm:block">TaskBoard - Nuxt + Tailwind</span>
             </NuxtLink>
 
             <button

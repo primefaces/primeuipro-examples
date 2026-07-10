@@ -7,12 +7,12 @@ Quickstarts for building kanban workflows with PrimeUI Pro TaskBoard.
 ## Available Quickstarts
 
 - [Nuxt quickstart](./vue/nuxt-quickstart) - PrimeOne UI parts, PrimeVue controls, a standard board, and task CRUD
+- [Nuxt + Tailwind quickstart](./vue/nuxt-tailwind-quickstart) - Tailwind UI parts, native controls, a standard board, and task CRUD without PrimeVue
 
 ## Planned Quickstarts
 
 - `vue/vite-quickstart`
 - `vue/vite-tailwind-quickstart`
-- `vue/nuxt-tailwind-quickstart`
 - `react` using [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter)
 - `angular` using [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter)
 
