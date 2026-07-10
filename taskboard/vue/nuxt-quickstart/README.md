@@ -1,49 +1,116 @@
 # PrimeUI Pro TaskBoard Nuxt Quickstart
 
-A standalone Nuxt 4 application with standard and swimlane TaskBoard examples.
+A standalone Nuxt 4 application for starting with [PrimeUI Pro TaskBoard for Vue](https://vue.primeuipro.dev/taskboard). It includes a standard board, a swimlane board, editable PrimeOne UI parts, and a PrimeVue task editor.
 
-## Start
+## Run the App
+
+From this directory:
 
 ```bash
-pnpm install
+corepack pnpm install
 cp .env.example .env
-pnpm dev
+corepack pnpm dev
 ```
 
-Set `NUXT_PUBLIC_PRIMEUI_LICENSE` in `.env` before running the app with a commercial PrimeUI Pro license.
+Set your PrimeUI Pro license key in `.env` before running the app:
 
-## Project Structure
+```dotenv
+NUXT_PUBLIC_PRIMEUI_LICENSE=your-license-key
+```
+
+Open `http://localhost:3000` after Nuxt starts.
+
+## Included Examples
+
+| Route | Example |
+| --- | --- |
+| `/` | Standard board with editable tasks and reorderable columns |
+| `/swimlanes` | Tasks grouped into collapsible team swimlanes |
+
+Both routes include add, edit, and delete flows. The dialog is application-owned PrimeVue UI; TaskBoard's `addTask`, `updateTask`, and `removeTask` methods update the controlled task array.
+
+## Project Map
 
 ```text
 app/
-├── components/             Reusable shell and copied PrimeOne UI parts
-├── config/theme.ts         Primary and surface palette options
-├── composables/            PrimeUI theme state
-├── demo/taskboard/         Removable TaskBoard composition and data
-├── layouts/default.vue     Topbar, sidebar, content, and footer
-├── pages/                  Standard and swimlane routes
-└── plugins/                PrimeUI license registration
+├── components/primeui/taskboard/  Keep: editable PrimeOne TaskBoard UI parts
+├── components/shell/              Optional: quickstart header, navigation, and footer
+├── config/theme.ts                Optional: primary and surface palette choices
+├── composables/useAppTheme.ts     Optional: theme persistence and token updates
+├── demo/taskboard/                Replace: example boards, task editor, and fixtures
+├── layouts/default.vue            Optional: quickstart application shell
+├── pages/                          Replace: thin route wrappers for the examples
+└── plugins/primeui-license.client.ts
+                                    Keep: PrimeUI Pro license registration
 ```
 
-The essential integration is in `app/demo/taskboard/StandardTaskBoard.vue` and `app/demo/taskboard/SwimlaneTaskBoard.vue`. Replace or remove the entire `app/demo/taskboard` folder when adapting the quickstart to an application.
+TaskBoard setup also lives in `package.json`, `nuxt.config.ts`, and `app/assets/css/main.css`. Do not remove those files when replacing only the sample data or routes.
 
-The editable PrimeOne UI parts in `app/components/primeui/taskboard` were copied with the PrimeUI CLI. They use PrimeVue components and can be changed independently of the TaskBoard runtime.
+## Adapt the Quickstart
+
+### Replace the sample data
+
+The fixture tasks, columns, swimlanes, and demo model types currently live in `app/demo/taskboard/data.ts`. Replace the exported values with data from your store or API. The example intentionally keeps persistence outside TaskBoard; update your backend or store when accepting board changes.
+
+### Keep only one example
+
+To keep the standard board only:
+
+1. Delete `app/pages/swimlanes.vue`.
+2. Delete `app/demo/taskboard/SwimlaneTaskBoard.vue`.
+3. Remove the `/swimlanes` entry from `app/components/shell/AppSidebar.vue`.
+4. Remove swimlane-specific fixture fields after connecting your own task model.
+
+To keep the swimlane board only, replace the `/` page with the swimlane example, remove `app/pages/swimlanes.vue`, and reduce the sidebar to one route.
+
+### Replace all examples
+
+`app/demo/taskboard` is removable only after its route imports are replaced:
+
+1. Replace or remove `app/pages/index.vue` and `app/pages/swimlanes.vue`.
+2. Update the entries in `app/components/shell/AppSidebar.vue`.
+3. Delete `app/demo/taskboard`.
+4. Update `primevue.components.include` in `nuxt.config.ts` if your replacement uses a different set of PrimeVue controls.
+
+The copied UI parts in `app/components/primeui/taskboard` are separate from the demo. Keep them when continuing with the PrimeOne TaskBoard appearance, or replace them with your own slot content.
+
+### Remove the quickstart shell
+
+The header, sidebar, footer, theme configurator, and logos are optional application scaffolding. To replace them with your own layout:
+
+1. Replace `app/layouts/default.vue` with your application layout.
+2. Delete `app/components/shell` and `app/components/AppPageHeader.vue` after removing their uses from your pages.
+3. Delete `app/config/theme.ts` and `app/composables/useAppTheme.ts` if you do not need the palette configurator.
+4. Delete the PrimeUI Pro logo files from `public/` if your layout does not use them.
+5. Remove unused `--app-*` shell tokens from `app/assets/css/main.css` while keeping the Tailwind import and PrimeUI token mappings your pages still use.
+
+## PrimeOne UI Parts
+
+The editable TaskBoard UI parts in `app/components/primeui/taskboard` were copied with the PrimeUI CLI. Regenerate them with:
 
 ```bash
-pnpm dlx @primeui/cli add taskboard --library vue --ui primeone --output-dir ./app/components/primeui
+corepack pnpm dlx @primeui/cli add taskboard --library vue --ui primeone --output-dir ./app/components/primeui
 ```
 
-TaskBoard's structural styles, PrimeOne theme, and copied component styles are registered in `nuxt.config.ts`. The same file configures PrimeVue with the Aura preset. Tailwind utilities consume the generated PrimeUI tokens from `app/assets/css/main.css`.
+TaskBoard's structural styles, the PrimeOne theme, and copied component styles are registered in `nuxt.config.ts`. The same file configures PrimeVue with Aura and registers the PrimeVue component styles used by this app. Keep `primevue.components.include` synchronized with any PrimeVue controls you add or remove.
 
-Both boards keep their CRUD flow in `app/demo/taskboard`: PrimeVue renders the task toolbar and editor dialog, while TaskBoard's exposed `addTask`, `updateTask`, and `removeTask` methods update the controlled task array.
+## Theme Configuration
 
-The topbar uses the PrimeUI Pro logo assets from `public/` and includes persistent primary, surface, and dark-mode controls. Palette options are isolated in `app/config/theme.ts` and applied with PrimeUI's `updatePreset` and `updateSurfacePalette` APIs.
+The quickstart supports light and dark modes plus configurable primary and surface palettes. Palette definitions are in `app/config/theme.ts`; `app/composables/useAppTheme.ts` applies them with `updatePreset` and `updateSurfacePalette` and stores the selection in local storage.
+
+Tailwind utilities use PrimeUI theme tokens mapped in `app/assets/css/main.css`.
 
 ## Commands
 
 ```bash
-pnpm dev
-pnpm typecheck
-pnpm build
-pnpm preview
+corepack pnpm dev
+corepack pnpm typecheck
+corepack pnpm build
+corepack pnpm preview
 ```
+
+## Documentation
+
+- [TaskBoard overview](https://vue.primeuipro.dev/taskboard)
+- [TaskBoard setup](https://vue.primeuipro.dev/taskboard/getting-started/setup)
+- [PrimeUI Pro](https://primeuipro.dev/)

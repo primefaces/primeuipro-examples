@@ -24,7 +24,7 @@ function isActive(to: string) {
                 <NuxtLink
                     :to="item.to"
                     class="flex min-h-10 items-center gap-3 rounded-lg px-3 text-sm font-medium no-underline transition-colors duration-150"
-                    :class="isActive(item.to) ? 'bg-[var(--app-panel)] text-primary-700 dark:text-primary-300' : 'text-[var(--app-text-muted)] hover:bg-[var(--app-hover)] hover:text-[var(--app-text)]'"
+                    :class="isActive(item.to) ? 'bg-[var(--app-panel)] text-[var(--p-primary-color)]' : 'text-[var(--app-text-muted)] hover:bg-[var(--app-hover)] hover:text-[var(--app-text)]'"
                     :aria-current="isActive(item.to) ? 'page' : undefined"
                     @click="$emit('navigate')"
                 >

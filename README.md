@@ -1,39 +1,54 @@
 # PrimeUI Pro Examples
 
-Quickstart examples for PrimeUI Pro components.
+Framework-specific quickstarts for [PrimeUI Pro](https://primeuipro.dev/).
 
-## Structure
+Each quickstart is a standalone application that shows the package installation, license setup, styles, UI parts, and a small set of practical component examples. Start with the app closest to your stack, run it locally, then replace the sample routes and data with your own application code.
 
-Examples are grouped by component first, then framework, then quickstart app:
+## Available Quickstarts
+
+| Component | Vue | React | Angular |
+| --- | --- | --- | --- |
+| [Scheduler](./scheduler) | Planned | Planned | Planned |
+| [TextEditor](./texteditor) | Planned | Planned | Planned |
+| [TaskBoard](./taskboard) | [Nuxt](./taskboard/vue/nuxt-quickstart) | Planned | Planned |
+| [Charts](./chart) | Planned | Planned | Planned |
+
+The React and Angular directories are placeholders for upcoming framework examples. A folder is listed as available only when it contains a runnable application and its own README.
+
+## Documentation
+
+- [PrimeUI Pro](https://primeuipro.dev/) - product and framework overview
+- [PrimeUI Pro for Vue](https://vue.primeuipro.dev/) - Vue component documentation and live examples
+- [Scheduler for Vue](https://vue.primeuipro.dev/scheduler)
+- [TextEditor for Vue](https://vue.primeuipro.dev/texteditor)
+- [TaskBoard for Vue](https://vue.primeuipro.dev/taskboard)
+- [Charts for Vue](https://vue.primeuipro.dev/charts)
+
+## Repository Structure
+
+Examples are grouped by component, framework, and quickstart application:
 
 ```text
 {component}/{framework}/{quickstart}
 ```
 
-Examples:
+The planned Vue quickstart matrix is:
 
 ```text
-scheduler/vue/vite-quickstart
-scheduler/vue/nuxt-tailwind-quickstart
-texteditor/vue/vite-quickstart
-taskboard/vue/nuxt-quickstart
-chart/vue/vite-tailwind-quickstart
+vite-quickstart
+nuxt-quickstart
+vite-tailwind-quickstart
+nuxt-tailwind-quickstart
 ```
 
-## Components
+The default quickstarts use PrimeOne UI parts with the framework's Prime UI library, such as PrimeVue. The Tailwind quickstarts use the component's editable Tailwind UI parts without requiring PrimeVue, PrimeReact, or PrimeNG.
 
-- [Scheduler](./scheduler)
-- [TextEditor](./texteditor)
-- [TaskBoard](./taskboard)
-- [Chart](./chart)
+## Working With an Example
 
-## Current Matrix
+Every runnable quickstart has its own dependencies, lockfile, environment example, and setup instructions. Run package manager commands from that quickstart's directory rather than from the repository root.
 
-Vue quickstart folders are reserved for the first runnable examples:
+The example routes, fixtures, and application shell are starter code. Each app README identifies what is required for the PrimeUI Pro integration, what can be replaced, and which related files must be removed together.
 
-- Vite quickstart
-- Nuxt quickstart
-- Vite + Tailwind quickstart
-- Nuxt + Tailwind quickstart
+## License
 
-React and Angular folders are intentionally present as placeholders for future quickstarts.
+This public repository contains example application source. Running an example that imports PrimeUI Pro packages requires your own valid PrimeUI Pro license key. Follow the environment setup in the selected quickstart README.
