@@ -1,4 +1,4 @@
-import type { TaskBoardItem, TaskBoardSwimlane } from '@primeui/vue-taskboard';
+import type { TaskBoardItem } from '@primeui/vue-taskboard';
 
 export type DemoPriority = 'low' | 'medium' | 'high';
 
@@ -14,7 +14,6 @@ export interface DemoTask extends TaskBoardItem {
     title: string;
     description?: string;
     columnId: string;
-    teamId: string;
     category: string;
     priority: DemoPriority;
     assignee: string;
@@ -26,7 +25,6 @@ export interface DemoTaskFormValue {
     title: string;
     description: string;
     columnId: string | number;
-    teamId: string | number;
     category: string;
     priority: DemoPriority;
     assignee: string;
@@ -40,18 +38,11 @@ export const demoColumns: DemoColumn[] = [
     { id: 'done', label: 'Done', statusType: 'done', order: 3 }
 ];
 
-export const demoSwimlanes: TaskBoardSwimlane[] = [
-    { id: 'design', label: 'Design', order: 0 },
-    { id: 'platform', label: 'Platform', order: 1 },
-    { id: 'growth', label: 'Growth', order: 2 }
-];
-
 const demoTasks: DemoTask[] = [
     {
         id: 'PUI-184',
         title: 'Map keyboard focus states',
         columnId: 'backlog',
-        teamId: 'design',
         category: 'Accessibility',
         priority: 'high',
         assignee: 'Mina Cole',
@@ -62,7 +53,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-191',
         title: 'Review empty board language',
         columnId: 'backlog',
-        teamId: 'growth',
         category: 'Content',
         priority: 'low',
         assignee: 'Owen Ray',
@@ -73,7 +63,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-198',
         title: 'Define server persistence adapter',
         columnId: 'backlog',
-        teamId: 'platform',
         category: 'Architecture',
         priority: 'medium',
         assignee: 'Theo Grant',
@@ -84,7 +73,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-176',
         title: 'Finalize card density tokens',
         columnId: 'planned',
-        teamId: 'design',
         category: 'Design system',
         priority: 'medium',
         assignee: 'Mina Cole',
@@ -95,7 +83,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-180',
         title: 'Add optimistic move handling',
         columnId: 'planned',
-        teamId: 'platform',
         category: 'Data flow',
         priority: 'high',
         assignee: 'Nora Hall',
@@ -106,7 +93,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-187',
         title: 'Prepare release announcement',
         columnId: 'planned',
-        teamId: 'growth',
         category: 'Launch',
         priority: 'medium',
         assignee: 'Owen Ray',
@@ -115,9 +101,8 @@ const demoTasks: DemoTask[] = [
     },
     {
         id: 'PUI-169',
-        title: 'Build swimlane collapse behavior',
+        title: 'Improve keyboard move feedback',
         columnId: 'in-progress',
-        teamId: 'platform',
         category: 'Interaction',
         priority: 'high',
         assignee: 'Nora Hall',
@@ -128,7 +113,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-172',
         title: 'Polish drag preview treatment',
         columnId: 'in-progress',
-        teamId: 'design',
         category: 'Interaction',
         priority: 'medium',
         assignee: 'Mina Cole',
@@ -139,7 +123,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-179',
         title: 'Record onboarding walkthrough',
         columnId: 'in-progress',
-        teamId: 'growth',
         category: 'Education',
         priority: 'low',
         assignee: 'Owen Ray',
@@ -150,7 +133,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-151',
         title: 'Ship column reorder events',
         columnId: 'done',
-        teamId: 'platform',
         category: 'API',
         priority: 'high',
         assignee: 'Theo Grant',
@@ -161,7 +143,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-158',
         title: 'Approve compact card layout',
         columnId: 'done',
-        teamId: 'design',
         category: 'Design system',
         priority: 'medium',
         assignee: 'Mina Cole',
@@ -172,7 +153,6 @@ const demoTasks: DemoTask[] = [
         id: 'PUI-163',
         title: 'Publish migration checklist',
         columnId: 'done',
-        teamId: 'growth',
         category: 'Documentation',
         priority: 'low',
         assignee: 'Owen Ray',

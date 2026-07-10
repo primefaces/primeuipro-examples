@@ -2,7 +2,7 @@
 
 Framework-specific quickstarts for [PrimeUI Pro](https://primeuipro.dev/).
 
-Each quickstart is a standalone application that shows the package installation, license setup, styles, UI parts, and a small set of practical component examples. Start with the app closest to your stack, run it locally, then replace the sample routes and data with your own application code.
+Each quickstart is a standalone application with one focused component example and a minimal topbar and footer. It shows package installation, license setup, styles, UI parts, and the component integration without turning the starter into a full application template.
 
 ## Available Quickstarts
 
@@ -49,7 +49,7 @@ The default quickstarts use PrimeOne UI parts with the framework's Prime UI libr
 
 Every runnable quickstart has its own dependencies, lockfile, environment example, and setup instructions. Run package manager commands from that quickstart's directory rather than from the repository root.
 
-The example routes, fixtures, and application shell are starter code. Each app README identifies what is required for the PrimeUI Pro integration, what can be replaced, and which related files must be removed together.
+The example page, fixture data, and lightweight shell are starter code. Each app README identifies what is required for the PrimeUI Pro integration and what can be replaced or removed.
 
 ## License
 

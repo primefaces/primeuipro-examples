@@ -1,12 +1,12 @@
 # PrimeUI Pro TaskBoard Examples
 
-Quickstarts for building kanban and swimlane workflows with PrimeUI Pro TaskBoard.
+Quickstarts for building kanban workflows with PrimeUI Pro TaskBoard.
 
 [Read the Vue TaskBoard documentation](https://vue.primeuipro.dev/taskboard).
 
 ## Available Quickstarts
 
-- [Nuxt quickstart](./vue/nuxt-quickstart) - PrimeOne UI parts, PrimeVue controls, standard board, swimlanes, and task CRUD
+- [Nuxt quickstart](./vue/nuxt-quickstart) - PrimeOne UI parts, PrimeVue controls, a standard board, and task CRUD
 
 ## Planned Quickstarts
 

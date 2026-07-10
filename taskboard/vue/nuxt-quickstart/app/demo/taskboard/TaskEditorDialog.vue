@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { TaskBoardSwimlane } from '@primeui/vue-taskboard';
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
@@ -8,17 +7,11 @@ import Textarea from 'primevue/textarea';
 import { computed, ref, watch } from 'vue';
 import type { DemoColumn, DemoTask, DemoTaskFormValue } from './data';
 
-const props = withDefaults(
-    defineProps<{
-        visible: boolean;
-        task: DemoTask | null;
-        columns: DemoColumn[];
-        swimlanes?: TaskBoardSwimlane[];
-    }>(),
-    {
-        swimlanes: () => []
-    }
-);
+const props = defineProps<{
+    visible: boolean;
+    task: DemoTask | null;
+    columns: DemoColumn[];
+}>();
 
 const emit = defineEmits<{
     'update:visible': [value: boolean];
@@ -46,7 +39,6 @@ function emptyDraft(): DemoTaskFormValue {
         title: '',
         description: '',
         columnId: props.columns[0]?.id ?? '',
-        teamId: props.swimlanes[0]?.id ?? '',
         category: '',
         priority: 'medium',
         assignee: '',
@@ -61,7 +53,6 @@ function resetDraft() {
               title: props.task.title,
               description: props.task.description ?? '',
               columnId: props.task.columnId,
-              teamId: props.task.teamId,
               category: props.task.category,
               priority: props.task.priority,
               assignee: props.task.assignee,
@@ -121,11 +112,6 @@ watch(
             <div>
                 <label for="task-column" class="mb-1.5 block text-sm font-medium text-[var(--app-text)]">Column</label>
                 <Select id="task-column" v-model="draft.columnId" :options="columns" optionLabel="label" optionValue="id" class="w-full" />
-            </div>
-
-            <div v-if="swimlanes.length">
-                <label for="task-team" class="mb-1.5 block text-sm font-medium text-[var(--app-text)]">Team</label>
-                <Select id="task-team" v-model="draft.teamId" :options="swimlanes" optionLabel="label" optionValue="id" class="w-full" />
             </div>
 
             <div>

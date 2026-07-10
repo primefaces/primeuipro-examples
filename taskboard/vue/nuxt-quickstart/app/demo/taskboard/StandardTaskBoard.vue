@@ -35,7 +35,6 @@ function saveTask(value: DemoTaskFormValue) {
         ...value,
         id: existing?.id ?? `PUI-${Date.now().toString(36).toUpperCase()}`,
         columnId: String(value.columnId),
-        teamId: String(value.teamId || existing?.teamId || 'design'),
         category,
         tags: [category],
         order: !existing || placementChanged ? nextOrder(value.columnId) : existing.order
