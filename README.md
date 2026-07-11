@@ -13,14 +13,14 @@ Each quickstart is a standalone application with one focused component example a
 | [TaskBoard](./taskboard) | [Vite](./taskboard/vue/vite-quickstart), [Nuxt](./taskboard/vue/nuxt-quickstart), [Vite + Tailwind](./taskboard/vue/vite-tailwind-quickstart), [Nuxt + Tailwind](./taskboard/vue/nuxt-tailwind-quickstart) | Planned | Planned |
 | [Charts](./chart) | Planned | Planned | Planned |
 
-The React and Angular directories are placeholders for upcoming framework examples. Future React quickstarts will use [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter), and future Angular quickstarts will use [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter) as their framework UI baselines. A folder is listed as available only when it contains a runnable application and its own README.
+The React and Angular directories are placeholders for upcoming framework examples. Future React quickstarts will use [PrimeReact](https://primereact.org/), and future Angular quickstarts will use [PrimeNG](https://primeng.org/) as their framework UI baselines. A folder is listed as available only when it contains a runnable application and its own README.
 
 ## Documentation
 
 - [PrimeUI Pro](https://primeuipro.dev/) - product and framework overview
 - [PrimeUI Pro for Vue](https://vue.primeuipro.dev/) - Vue component documentation and live examples
-- [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter) - React framework source for upcoming quickstarts
-- [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter) - Angular framework source for upcoming quickstarts
+- [PrimeReact](https://primereact.org/) - React component documentation and live examples
+- [PrimeNG](https://primeng.org/) - Angular component documentation and live examples
 - [Scheduler for Vue](https://vue.primeuipro.dev/scheduler)
 - [TextEditor for Vue](https://vue.primeuipro.dev/texteditor)
 - [TaskBoard for Vue](https://vue.primeuipro.dev/taskboard)

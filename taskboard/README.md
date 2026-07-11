@@ -13,8 +13,8 @@ Quickstarts for building kanban workflows with PrimeUI Pro TaskBoard.
 
 ## Planned Quickstarts
 
-- `react` using [PrimeReact NextChapter](https://github.com/primefaces/primereact-nextchapter)
-- `angular` using [PrimeNG NextChapter](https://github.com/primefaces/primeng-nextchapter)
+- `react` using [PrimeReact](https://primereact.org/)
+- `angular` using [PrimeNG](https://primeng.org/)
 
 Planned directories are placeholders until runnable applications and setup instructions are added.
 
