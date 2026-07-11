@@ -53,4 +53,4 @@ The example page, fixture data, and lightweight shell are starter code. Each app
 
 ## License
 
-This public repository contains example application source. Running an example that imports PrimeUI Pro packages requires your own valid PrimeUI Pro license key. Follow the environment setup in the selected quickstart README.
+This public repository contains example application source. Running an example that imports PrimeUI Pro packages requires your own valid PrimeUI Pro license key and is subject to the [PrimeUI License](https://primeui.dev/licenses). Follow the environment setup in the selected quickstart README.
