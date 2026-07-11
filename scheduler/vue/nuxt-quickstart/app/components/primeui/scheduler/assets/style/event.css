@@ -1,0 +1,413 @@
+.scheduler-time-grid-event-ui,
+.scheduler-all-day-event-ui,
+.scheduler-month-event-ui,
+.scheduler-timeline-event-ui {
+    --scheduler-event-ui-resize-duration: 180ms;
+    --scheduler-event-ui-resize-surface-duration: 220ms;
+    --scheduler-event-ui-resize-easing: cubic-bezier(0.16, 1, 0.3, 1);
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+[data-slot="scheduler-time-grid-event"].p-scheduler-event-resizable {
+    --scheduler-event-ui-resize-duration: 180ms;
+    --scheduler-event-ui-resize-surface-duration: 220ms;
+    --scheduler-event-ui-resize-easing: cubic-bezier(0.16, 1, 0.3, 1);
+
+    transition:
+        opacity 90ms ease,
+        box-shadow var(--scheduler-event-ui-resize-surface-duration) var(--scheduler-event-ui-resize-easing);
+}
+
+[data-slot="scheduler-timeline-event"].p-scheduler-event-resizable {
+    --scheduler-event-ui-resize-duration: 180ms;
+    --scheduler-event-ui-resize-surface-duration: 220ms;
+    --scheduler-event-ui-resize-easing: cubic-bezier(0.16, 1, 0.3, 1);
+
+    transition:
+        opacity 90ms ease,
+        box-shadow var(--scheduler-event-ui-resize-surface-duration) var(--scheduler-event-ui-resize-easing);
+}
+
+[data-slot="scheduler-time-grid-event"].p-scheduler-event-resizing,
+[data-slot="scheduler-time-grid-event"].p-scheduler-event-dragging,
+[data-slot="scheduler-timeline-event"].p-scheduler-event-resizing,
+[data-slot="scheduler-timeline-event"].p-scheduler-event-dragging,
+[data-slot="scheduler-timeline-event"].p-scheduler-event-multi-drag-preview {
+    transition: none;
+}
+
+[data-slot="scheduler-time-grid-event"].p-scheduler-event-resizing .scheduler-time-grid-event-ui,
+[data-slot="scheduler-time-grid-event"].p-scheduler-event-dragging .scheduler-time-grid-event-ui,
+[data-slot="scheduler-timeline-event"].p-scheduler-event-resizing .scheduler-timeline-event-ui,
+[data-slot="scheduler-timeline-event"].p-scheduler-event-dragging .scheduler-timeline-event-ui {
+    transition: none;
+}
+
+[data-slot="scheduler-timeline-event"].p-scheduler-event-resizing .scheduler-timeline-event-ui .scheduler-timeline-event-ui-content,
+[data-slot="scheduler-timeline-event"].p-scheduler-event-dragging .scheduler-timeline-event-ui .scheduler-timeline-event-ui-content {
+    transition: none;
+}
+
+.scheduler-time-grid-event-ui,
+.scheduler-timeline-event-ui {
+    display: grid;
+    grid-template-columns: 2px minmax(0, 1fr);
+    align-items: start;
+    gap: 0.25rem;
+    min-height: 20px;
+    padding: 0.25rem 0.375rem 0.25rem 0.25rem;
+    border: 1px solid
+        light-dark(
+            color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 28%, var(--p-content-border-color)),
+            color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 42%, var(--p-content-border-color))
+        );
+    border-radius: var(--p-border-radius-sm);
+    background: light-dark(
+        color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 10%, var(--p-content-background)),
+        color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 24%, var(--p-content-background))
+    );
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 10%, transparent);
+    transition:
+        border-color var(--scheduler-event-ui-resize-surface-duration) var(--scheduler-event-ui-resize-easing),
+        background var(--scheduler-event-ui-resize-surface-duration) var(--scheduler-event-ui-resize-easing),
+        box-shadow var(--scheduler-event-ui-resize-surface-duration) var(--scheduler-event-ui-resize-easing),
+        filter var(--scheduler-event-ui-resize-surface-duration) var(--scheduler-event-ui-resize-easing);
+}
+
+.scheduler-time-grid-event-ui {
+    color: var(--scheduler-time-grid-event-ui-color);
+}
+
+.scheduler-timeline-event-ui {
+    color: var(--scheduler-timeline-event-ui-color);
+}
+
+.scheduler-time-grid-event-ui-marker,
+.scheduler-timeline-event-ui-marker,
+.scheduler-all-day-event-ui-marker,
+.scheduler-month-event-ui-marker {
+    border-radius: 999px;
+    background: var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent))));
+}
+
+.scheduler-time-grid-event-ui-marker,
+.scheduler-timeline-event-ui-marker,
+.scheduler-month-event-ui-marker {
+    width: 2px;
+    height: 100%;
+    min-height: 0.75rem;
+}
+
+.scheduler-time-grid-event-ui-content,
+.scheduler-timeline-event-ui-content,
+.scheduler-month-event-ui-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 0.0625rem;
+    overflow: hidden;
+}
+
+.scheduler-timeline-event-ui:not(.scheduler-timeline-event-ui--year) .scheduler-timeline-event-ui-content {
+    transition: transform 32ms linear;
+    will-change: transform;
+}
+
+.scheduler-time-grid-event-ui-title,
+.scheduler-timeline-event-ui-title,
+.scheduler-month-event-ui-title,
+.scheduler-all-day-event-ui-title {
+    min-width: 0;
+    overflow: hidden;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-time-grid-event-ui-title {
+    color: var(--scheduler-time-grid-event-ui-color);
+}
+
+.scheduler-timeline-event-ui-title {
+    color: var(--scheduler-timeline-event-ui-color);
+}
+
+.scheduler-time-grid-event-ui-time,
+.scheduler-timeline-event-ui-time,
+.scheduler-month-event-ui-time {
+    min-width: 0;
+    overflow: hidden;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.15;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-time-grid-event-ui-time {
+    color: var(--scheduler-time-grid-event-ui-time-color);
+}
+
+.scheduler-timeline-event-ui-time {
+    color: var(--scheduler-timeline-event-ui-time-color);
+}
+
+.scheduler-all-day-event-ui,
+.scheduler-month-event-ui--spanning {
+    display: grid;
+    grid-template-columns: 2px minmax(0, 1fr);
+    align-items: start;
+    gap: 0.25rem;
+    min-height: 1.25rem;
+    padding: 0.125rem 0.375rem 0.125rem 0.25rem;
+    border: 1px solid
+        light-dark(
+            color-mix(in srgb, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent)) 28%, var(--p-content-border-color)),
+            color-mix(in srgb, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent)) 42%, var(--p-content-border-color))
+        );
+    border-radius: var(--p-border-radius-sm);
+    background: light-dark(
+        color-mix(in srgb, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent)) 10%, var(--p-content-background)),
+        color-mix(in srgb, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent)) 24%, var(--p-content-background))
+    );
+    color: var(--scheduler-all-day-event-ui-color, var(--scheduler-month-event-ui-color));
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent)) 10%, transparent);
+}
+
+.scheduler-all-day-event-ui-marker {
+    width: 2px;
+    height: 100%;
+    min-height: 0.75rem;
+}
+
+.scheduler-month-event-ui--inline {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-height: 1.125rem;
+    padding: 0.0625rem 0.375rem 0.0625rem 0.25rem;
+    border: 1px solid transparent;
+    border-radius: var(--p-border-radius-sm);
+    background: transparent;
+    color: var(--scheduler-month-event-ui-color);
+}
+
+.scheduler-month-event-ui--inline:hover {
+    background: var(--p-scheduler-day-hover-background, color-mix(in srgb, var(--scheduler-month-event-ui-accent) 8%, transparent));
+}
+
+.scheduler-month-event-ui--inline .scheduler-month-event-ui-content {
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.scheduler-month-event-ui--continuation-only {
+    grid-template-columns: 2px minmax(0, 1fr);
+}
+
+.scheduler-month-event-ui--continuation-only .scheduler-month-event-ui-marker {
+    min-height: 0.875rem;
+}
+
+.scheduler-month-event-ui-content--continuation {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.scheduler-month-event-ui-title,
+.scheduler-month-event-ui-continuation {
+    color: var(--scheduler-month-event-ui-color);
+}
+
+.scheduler-month-event-ui-time {
+    color: var(--scheduler-month-event-ui-time-color);
+}
+
+.scheduler-month-event-ui-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--scheduler-month-event-ui-accent);
+}
+
+.scheduler-month-event-ui-continuation {
+    font-size: 0.75rem;
+    line-height: 1;
+    opacity: 0.72;
+}
+
+.scheduler-timeline-event-ui--year {
+    display: flex;
+    align-items: center;
+    min-height: 1.375rem;
+    padding: 0.125rem 0.375rem;
+}
+
+.scheduler-timeline-event-ui--year .scheduler-timeline-event-ui-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.scheduler-time-grid-event-ui-badge,
+.scheduler-all-day-event-ui-badge,
+.scheduler-month-event-ui-badge,
+.scheduler-timeline-event-ui-badge,
+.scheduler-agenda-event-ui-badge {
+    position: absolute;
+    inset-block-start: 0.25rem;
+    inset-inline-end: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding-inline: 0.375rem;
+    border-radius: 999px;
+    background: var(--scheduler-time-grid-event-ui-accent, var(--scheduler-all-day-event-ui-accent, var(--scheduler-month-event-ui-accent, var(--scheduler-timeline-event-ui-accent, var(--scheduler-agenda-event-ui-accent)))));
+    color: var(--p-scheduler-event-badge-color, var(--p-primary-contrast-color));
+    font-size: 0.6875rem;
+    font-weight: 700;
+    box-shadow: var(--p-scheduler-event-badge-shadow, 0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.scheduler-time-grid-event-ui-selected,
+.scheduler-all-day-event-ui-selected,
+.scheduler-month-event-ui-selected,
+.scheduler-timeline-event-ui-selected {
+    outline: 2px solid var(--p-primary-color);
+    outline-offset: -2px;
+}
+
+.scheduler-time-grid-event-ui-dragging,
+.scheduler-all-day-event-ui-dragging,
+.scheduler-month-event-ui-dragging,
+.scheduler-timeline-event-ui-dragging,
+.scheduler-agenda-event-ui-dragging {
+    opacity: 0.72;
+}
+
+.scheduler-time-grid-event-ui-resizing,
+.scheduler-timeline-event-ui-resizing {
+    box-shadow:
+        0 0 0 2px color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 42%, transparent),
+        0 0.375rem 1rem color-mix(in srgb, var(--scheduler-time-grid-event-ui-accent, var(--scheduler-timeline-event-ui-accent)) 18%, transparent);
+    filter: saturate(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-slot="scheduler-time-grid-event"].p-scheduler-event-resizable,
+    [data-slot="scheduler-timeline-event"].p-scheduler-event-resizable,
+    .scheduler-time-grid-event-ui,
+    .scheduler-timeline-event-ui,
+    .scheduler-timeline-event-ui:not(.scheduler-timeline-event-ui--year) .scheduler-timeline-event-ui-content {
+        transition: none;
+    }
+}
+
+.scheduler-time-grid-event-ui-invalid-drop,
+.scheduler-month-event-ui-invalid-drop,
+.scheduler-timeline-event-ui-invalid-drop,
+.scheduler-event-ui-invalid-drop {
+    opacity: 0.55;
+}
+
+.scheduler-time-grid-event-ui--density-minimal,
+.scheduler-timeline-event-ui--density-minimal {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: 0;
+    padding: 0.0625rem 0.25rem;
+}
+
+.scheduler-time-grid-event-ui--density-minimal .scheduler-time-grid-event-ui-content,
+.scheduler-timeline-event-ui--density-minimal .scheduler-timeline-event-ui-content {
+    justify-content: center;
+}
+
+.scheduler-time-grid-event-ui--density-minimal .scheduler-time-grid-event-ui-title,
+.scheduler-timeline-event-ui--density-minimal .scheduler-timeline-event-ui-title {
+    line-height: 1.15;
+}
+
+.scheduler-time-grid-event-ui--density-minimal .scheduler-time-grid-event-ui-time,
+.scheduler-time-grid-event-ui--density-minimal .scheduler-time-grid-event-ui-marker,
+.scheduler-timeline-event-ui--density-minimal .scheduler-timeline-event-ui-time,
+.scheduler-timeline-event-ui--density-minimal .scheduler-timeline-event-ui-marker,
+.scheduler-month-event-ui--density-minimal .scheduler-month-event-ui-time,
+.scheduler-month-event-ui--density-minimal .scheduler-month-event-ui-marker {
+    display: none;
+}
+
+.scheduler-agenda-event-ui {
+    display: grid;
+    grid-template-columns: 0.625rem minmax(0, 1fr) minmax(6rem, auto);
+    align-items: start;
+    gap: 0.75rem;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    border-inline-start: 3px solid var(--scheduler-agenda-event-ui-accent);
+    border-radius: var(--p-border-radius-sm);
+    background: light-dark(color-mix(in srgb, var(--scheduler-agenda-event-ui-accent) 10%, var(--p-content-background)), color-mix(in srgb, var(--scheduler-agenda-event-ui-accent) 24%, var(--p-content-background)));
+    color: var(--scheduler-agenda-event-ui-color);
+    box-sizing: border-box;
+}
+
+.p-scheduler-agenda-event:has(.scheduler-agenda-event-ui).p-scheduler-event-selected,
+.p-scheduler-agenda-event:has(.scheduler-agenda-event-ui):focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.scheduler-agenda-event-ui-selected {
+    border-radius: var(--p-border-radius-sm);
+    box-shadow: inset 0 0 0 2px var(--p-scheduler-event-selected-ring-color);
+}
+
+.p-scheduler-agenda-event:focus-visible .scheduler-agenda-event-ui {
+    border-radius: var(--p-border-radius-sm);
+    box-shadow: 0 0 0 2px var(--p-scheduler-focus-ring-color);
+}
+
+.scheduler-agenda-event-ui-marker {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-block-start: 0.25rem;
+    border-radius: 999px;
+    background: var(--scheduler-agenda-event-ui-accent);
+}
+
+.scheduler-agenda-event-ui-title {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--scheduler-agenda-event-ui-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-agenda-event-ui-time {
+    overflow: hidden;
+    color: var(--scheduler-agenda-event-ui-time-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: end;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

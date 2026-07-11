@@ -1,0 +1,36 @@
+.scheduler-month-header-cell-ui {
+    display: contents;
+}
+
+.scheduler-month-header-cell-ui-item {
+    min-width: 0;
+    padding: var(--p-scheduler-weekday-padding, 0.5rem);
+    text-align: center;
+    color: var(--p-scheduler-weekday-color, var(--p-text-muted-color));
+    font-size: var(--p-scheduler-weekday-font-size, var(--p-scheduler-font-size-sm, 0.75rem));
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.scheduler-month-cell-number-ui {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-block-end: 0.25rem;
+    border-radius: 999px;
+    color: var(--p-text-color);
+    font-size: var(--p-scheduler-font-size-md, 0.875rem);
+    line-height: 1;
+}
+
+.scheduler-month-cell-number-ui-other-month {
+    color: var(--p-scheduler-day-other-month-color, var(--p-text-muted-color));
+}
+
+.scheduler-month-cell-number-ui-today {
+    background: var(--p-scheduler-month-day-number-today-background, color-mix(in srgb, var(--p-primary-color) 12%, transparent));
+    color: var(--p-scheduler-month-day-number-today-color, var(--p-primary-color));
+    font-weight: 600;
+}

@@ -1,0 +1,74 @@
+.scheduler-selection-toolbar-ui {
+    --scheduler-selection-toolbar-ui-border-color: var(--p-scheduler-selection-toolbar-border-color, light-dark(var(--p-primary-100), var(--p-primary-900)));
+    --scheduler-selection-toolbar-ui-background: var(--p-scheduler-selection-toolbar-background, light-dark(var(--p-primary-50), var(--p-primary-950)));
+    --scheduler-selection-toolbar-ui-count-background: light-dark(color-mix(in srgb, var(--p-primary-color) 14%, var(--p-content-background)), color-mix(in srgb, var(--p-primary-color) 28%, var(--p-content-background)));
+    --scheduler-selection-toolbar-ui-count-color: var(--p-scheduler-selection-toolbar-color, light-dark(var(--p-primary-700), var(--p-primary-300)));
+
+    container-type: inline-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 0;
+    gap: 0.75rem;
+    padding-block: 0.625rem;
+    padding-inline: 0.875rem;
+    border-block-end: 1px solid var(--scheduler-selection-toolbar-ui-border-color);
+    background: var(--scheduler-selection-toolbar-ui-background);
+    color: var(--p-text-color);
+    font-size: 0.875rem;
+}
+
+.scheduler-selection-toolbar-ui-summary {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 0.625rem;
+}
+
+.scheduler-selection-toolbar-ui-count {
+    flex: 0 0 auto;
+    border-radius: 999px;
+    padding-block: 0.25rem;
+    padding-inline: 0.625rem;
+    background: var(--scheduler-selection-toolbar-ui-count-background);
+    color: var(--scheduler-selection-toolbar-ui-count-color);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.scheduler-selection-toolbar-ui-events {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--p-text-muted-color);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-selection-toolbar-ui-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.375rem;
+}
+
+@container (max-width: 640px) {
+    .scheduler-selection-toolbar-ui {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .scheduler-selection-toolbar-ui-summary,
+    .scheduler-selection-toolbar-ui-actions {
+        width: 100%;
+    }
+
+    .scheduler-selection-toolbar-ui-actions {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}

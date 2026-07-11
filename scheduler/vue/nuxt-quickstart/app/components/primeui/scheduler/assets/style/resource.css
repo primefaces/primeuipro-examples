@@ -1,0 +1,141 @@
+.scheduler-resource-header-ui {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    color: var(--p-scheduler-title-color, var(--p-text-color));
+    font-weight: 600;
+    text-align: center;
+}
+
+.scheduler-resource-header-ui-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-resource-row-ui,
+.scheduler-resource-column-header-ui {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    max-width: 100%;
+    gap: 0.375rem;
+    color: var(--p-scheduler-resource-ui-color, var(--p-text-color));
+}
+
+.scheduler-resource-row-ui-marker {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    flex: 0 0 auto;
+    background: var(--scheduler-resource-row-ui-color, var(--p-primary-color));
+}
+
+.scheduler-resource-row-ui-title,
+.scheduler-resource-column-header-ui-title {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-resource-column-header-ui {
+    justify-content: center;
+    gap: 0.4375rem;
+    padding-inline: 0.5rem;
+    text-align: center;
+}
+
+.scheduler-resource-column-header-ui-marker {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    flex: 0 0 auto;
+    background: var(--scheduler-resource-column-header-ui-color, var(--p-primary-color));
+    box-shadow: 0 0 0 0.1875rem color-mix(in srgb, var(--scheduler-resource-column-header-ui-color, var(--p-primary-color)) 14%, transparent);
+}
+
+.scheduler-resource-column-header-ui-parent {
+    gap: 0;
+}
+
+.scheduler-resource-column-header-ui-parent .scheduler-resource-column-header-ui-marker {
+    display: none;
+}
+
+.scheduler-resource-column-header-ui-body {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    min-width: 0;
+    max-width: 100%;
+    gap: 0.375rem;
+}
+
+.scheduler-resource-column-header-ui-parent .scheduler-resource-column-header-ui-body {
+    justify-content: center;
+}
+
+.scheduler-resource-column-header-ui-meta {
+    display: inline-flex;
+    align-items: baseline;
+    flex: 0 0 auto;
+    gap: 0.375rem;
+    color: var(--p-text-muted-color);
+    font-size: var(--p-scheduler-font-size-xs);
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.scheduler-resource-column-header-ui-meta::before {
+    content: "";
+    width: 0.1875rem;
+    height: 0.1875rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 55%, transparent);
+}
+
+.scheduler-resource-column-header-ui-meta-item {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.scheduler-resource-aggregate-badge-ui {
+    --scheduler-resource-aggregate-badge-ui-background: var(--p-scheduler-resource-aggregate-background, light-dark(var(--p-primary-50), color-mix(in srgb, var(--p-primary-color) 18%, transparent)));
+    --scheduler-resource-aggregate-badge-ui-color: var(--p-scheduler-resource-aggregate-color, light-dark(var(--p-primary-700), var(--p-primary-300)));
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.375rem;
+    border-radius: 999px;
+    background: var(--scheduler-resource-aggregate-badge-ui-background);
+    color: var(--scheduler-resource-aggregate-badge-ui-color);
+    font-size: var(--p-scheduler-font-size-xs);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.scheduler-resource-aggregate-badge-ui-conflict {
+    --scheduler-resource-aggregate-badge-ui-background: light-dark(var(--p-orange-50), var(--p-orange-950));
+    --scheduler-resource-aggregate-badge-ui-color: light-dark(var(--p-orange-700), var(--p-orange-300));
+}
+
+.scheduler-resource-aggregate-badge-ui-capacity-near {
+    --scheduler-resource-aggregate-badge-ui-background: var(--p-scheduler-capacity-near-full-background, light-dark(var(--p-yellow-50), var(--p-yellow-950)));
+    --scheduler-resource-aggregate-badge-ui-color: var(--p-scheduler-capacity-near-full-color, light-dark(var(--p-yellow-700), var(--p-yellow-300)));
+}
+
+.scheduler-resource-aggregate-badge-ui-capacity-full {
+    --scheduler-resource-aggregate-badge-ui-background: var(--p-scheduler-capacity-full-background, light-dark(var(--p-red-50), var(--p-red-950)));
+    --scheduler-resource-aggregate-badge-ui-color: var(--p-scheduler-capacity-full-color, light-dark(var(--p-red-700), var(--p-red-300)));
+}

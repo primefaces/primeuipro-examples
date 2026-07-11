@@ -4,16 +4,14 @@ Quickstarts for building scheduling applications with PrimeUI Pro Scheduler.
 
 [Read the Vue Scheduler documentation](https://vue.primeuipro.dev/scheduler).
 
-## Availability
+## Available Quickstarts
 
-There are no runnable Scheduler quickstarts in this repository yet.
+- [Vite quickstart](./vue/vite-quickstart) - PrimeOne UI parts, PrimeVue controls, and Month, Week, and Resource Timeline views
+- [Nuxt quickstart](./vue/nuxt-quickstart) - PrimeOne UI parts, PrimeVue controls, and Month, Week, and Resource Timeline views
+- [Vite + Tailwind quickstart](./vue/vite-tailwind-quickstart) - Tailwind UI parts and native controls without PrimeVue
+- [Nuxt + Tailwind quickstart](./vue/nuxt-tailwind-quickstart) - Tailwind UI parts and native controls without PrimeVue
 
-The planned Vue applications are:
-
-- `vue/vite-quickstart`
-- `vue/nuxt-quickstart`
-- `vue/vite-tailwind-quickstart`
-- `vue/nuxt-tailwind-quickstart`
+## Planned Quickstarts
 
 React quickstarts will use [PrimeReact](https://primereact.org/). Angular quickstarts will use [PrimeNG](https://primeng.org/). Their directories are placeholders until runnable examples are added.
 

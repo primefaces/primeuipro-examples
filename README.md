@@ -8,7 +8,7 @@ Each quickstart is a standalone application with one focused component example a
 
 | Component | Vue | React | Angular |
 | --- | --- | --- | --- |
-| [Scheduler](./scheduler) | Planned | Planned | Planned |
+| [Scheduler](./scheduler) | [Vite](./scheduler/vue/vite-quickstart), [Nuxt](./scheduler/vue/nuxt-quickstart), [Vite + Tailwind](./scheduler/vue/vite-tailwind-quickstart), [Nuxt + Tailwind](./scheduler/vue/nuxt-tailwind-quickstart) | Planned | Planned |
 | [TextEditor](./texteditor) | Planned | Planned | Planned |
 | [TaskBoard](./taskboard) | [Vite](./taskboard/vue/vite-quickstart), [Nuxt](./taskboard/vue/nuxt-quickstart), [Vite + Tailwind](./taskboard/vue/vite-tailwind-quickstart), [Nuxt + Tailwind](./taskboard/vue/nuxt-tailwind-quickstart) | Planned | Planned |
 | [Charts](./chart) | Planned | Planned | Planned |

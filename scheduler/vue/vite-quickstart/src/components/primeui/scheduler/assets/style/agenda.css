@@ -1,0 +1,71 @@
+.scheduler-agenda-date-header-ui {
+    --scheduler-agenda-date-header-ui-count-border-color: light-dark(color-mix(in srgb, var(--p-primary-color) 22%, var(--p-content-border-color)), color-mix(in srgb, var(--p-primary-color) 36%, var(--p-content-border-color)));
+    --scheduler-agenda-date-header-ui-count-background: light-dark(color-mix(in srgb, var(--p-primary-color) 8%, var(--p-content-background)), color-mix(in srgb, var(--p-primary-color) 18%, var(--p-content-background)));
+
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    border-block-end: 1px solid var(--p-content-border-color);
+    background: var(--p-scheduler-weekday-background, var(--p-content-background));
+    color: var(--p-text-color);
+    box-sizing: border-box;
+}
+
+.scheduler-agenda-date-header-ui-main {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.scheduler-agenda-date-header-ui-day {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--p-text-muted-color);
+    font-size: var(--p-scheduler-agenda-header-font-size, 0.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.scheduler-agenda-date-header-ui-date {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--p-text-color);
+    font-size: var(--p-scheduler-agenda-text-font-size, 0.875rem);
+    font-weight: 600;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-agenda-date-header-ui-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.75rem;
+    min-height: 1.5rem;
+    padding-block: 0.125rem;
+    padding-inline: 0.5rem;
+    border: 1px solid var(--scheduler-agenda-date-header-ui-count-border-color);
+    border-radius: 999px;
+    background: var(--scheduler-agenda-date-header-ui-count-background);
+    color: var(--p-text-color);
+    font-size: var(--p-scheduler-font-size-xs, 0.75rem);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.scheduler-agenda-date-header-ui[data-today] .scheduler-agenda-date-header-ui-day {
+    color: var(--p-primary-color);
+}

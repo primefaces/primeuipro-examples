@@ -1,0 +1,253 @@
+.scheduler-overlay-ui {
+    --scheduler-overlay-ui-menu-header-background: light-dark(var(--p-surface-50), var(--p-surface-800));
+    --scheduler-overlay-ui-footer-background: light-dark(var(--p-surface-50), var(--p-surface-900));
+    --scheduler-overlay-ui-hover-background: light-dark(var(--p-surface-100), var(--p-surface-800));
+    --scheduler-overlay-ui-hover-foreground: var(--p-text-color);
+    --scheduler-overlay-ui-hover-icon-foreground: var(--p-text-muted-color);
+    --scheduler-overlay-ui-shadow: light-dark(0 12px 32px color-mix(in srgb, var(--p-surface-900) 18%, transparent), 0 12px 32px color-mix(in srgb, var(--p-surface-950) 54%, transparent));
+
+    width: 100%;
+    min-width: 0;
+    border: 1px solid var(--p-content-border-color);
+    border-radius: var(--p-border-radius-lg);
+    background: var(--p-content-background);
+    color: var(--p-text-color);
+    box-shadow: var(--scheduler-overlay-ui-shadow);
+    overflow: hidden;
+}
+
+.scheduler-overlay-ui-popover,
+.scheduler-overlay-ui-quick-info,
+.scheduler-overlay-ui-more-popover {
+    min-width: 17.5rem;
+}
+
+.scheduler-overlay-ui-context-menu {
+    width: max-content;
+    min-width: 8.75rem;
+    max-width: min(14rem, calc(100vw - 2rem));
+}
+
+.scheduler-overlay-ui-header,
+.scheduler-overlay-ui-menu-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding: 0.875rem 1rem;
+}
+
+.scheduler-overlay-ui-header {
+    justify-content: space-between;
+}
+
+.scheduler-overlay-ui-header-accent {
+    border-bottom: 1px solid color-mix(in srgb, var(--p-primary-color) 20%, var(--p-content-border-color));
+    background: color-mix(in srgb, var(--p-primary-color) 10%, var(--p-content-background));
+}
+
+.scheduler-overlay-ui-menu-header {
+    flex-direction: column;
+    gap: 0.125rem;
+    border-bottom: 1px solid var(--p-content-border-color);
+    background: var(--scheduler-overlay-ui-menu-header-background);
+}
+
+.scheduler-overlay-ui-heading {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    gap: 0.125rem;
+}
+
+.scheduler-overlay-ui-title {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--p-text-color);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-overlay-ui-kicker,
+.scheduler-overlay-ui-muted {
+    color: var(--p-text-muted-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.scheduler-overlay-ui-marker {
+    width: 0.25rem;
+    min-height: 2rem;
+    border-radius: 999px;
+    background: var(--scheduler-overlay-ui-accent, var(--p-primary-color));
+}
+
+.scheduler-overlay-ui-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-height: 16rem;
+    padding: 0.875rem 1rem;
+    overflow-y: auto;
+}
+
+.scheduler-overlay-ui-row {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 0.5rem;
+    color: var(--p-text-muted-color);
+    font-size: 0.8125rem;
+    line-height: 1.35;
+}
+
+.scheduler-overlay-ui-row > i {
+    color: var(--scheduler-overlay-ui-accent, var(--p-primary-color));
+    font-size: 0.75rem;
+}
+
+.scheduler-overlay-ui-description {
+    margin: 0;
+    color: var(--p-text-muted-color);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.scheduler-overlay-ui-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--p-content-border-color);
+    background: var(--scheduler-overlay-ui-footer-background);
+}
+
+.scheduler-overlay-ui-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.scheduler-overlay-ui-icon-button {
+    flex: 0 0 auto;
+}
+
+.scheduler-overlay-ui-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-height: 20rem;
+    padding: 0.5rem;
+    overflow-y: auto;
+}
+
+.scheduler-overlay-ui-list-item,
+.scheduler-overlay-ui-menu-item {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: var(--p-border-radius-sm);
+    background: transparent;
+    color: var(--p-text-color);
+    cursor: default;
+    font: inherit;
+    text-align: start;
+}
+
+.scheduler-overlay-ui-list-item-interactive,
+.scheduler-overlay-ui-menu-item {
+    cursor: pointer;
+}
+
+.scheduler-overlay-ui-list-item-draggable {
+    cursor: grab;
+}
+
+.scheduler-overlay-ui-list-item {
+    padding: 0.5rem 0.625rem;
+}
+
+.scheduler-overlay-ui-list-item-interactive:hover,
+.scheduler-overlay-ui-list-item-draggable:hover,
+.scheduler-overlay-ui-menu-item:not(:disabled):hover,
+.scheduler-overlay-ui .scheduler-overlay-ui-list-item-interactive.p-button-text:not(:disabled):hover,
+.scheduler-overlay-ui .scheduler-overlay-ui-list-item-draggable.p-button-text:not(:disabled):hover,
+.scheduler-overlay-ui .scheduler-overlay-ui-menu-item.p-button-text:not(:disabled):hover {
+    border-color: transparent;
+    background: var(--scheduler-overlay-ui-hover-background);
+    color: var(--scheduler-overlay-ui-hover-foreground);
+}
+
+.scheduler-overlay-ui-list-item-interactive:focus-visible,
+.scheduler-overlay-ui-menu-item:focus-visible {
+    outline: 2px solid var(--p-primary-color);
+    outline-offset: -2px;
+}
+
+.scheduler-overlay-ui-list-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-overlay-ui-dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+}
+
+.scheduler-overlay-ui-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding: 0.25rem;
+}
+
+.scheduler-overlay-ui-menu-item {
+    min-height: 2rem;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.scheduler-overlay-ui-menu-item > i {
+    color: var(--p-text-muted-color);
+    font-size: 0.8125rem;
+}
+
+.scheduler-overlay-ui-menu-label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scheduler-overlay-ui-menu-item:not(:disabled):hover > i {
+    color: var(--scheduler-overlay-ui-hover-icon-foreground);
+}
+
+.scheduler-overlay-ui-menu-item:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.scheduler-overlay-ui-menu-separator {
+    height: 1px;
+    margin-block: 0.25rem;
+    background: var(--p-content-border-color);
+}
