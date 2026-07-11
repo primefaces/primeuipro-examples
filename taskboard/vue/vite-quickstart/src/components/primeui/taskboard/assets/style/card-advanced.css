@@ -1,0 +1,113 @@
+.taskboard-card-advanced {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: var(--p-taskboard-column-border-radius);
+    border: 1px solid var(--p-taskboard-swimlane-border-color);
+    background: var(--p-taskboard-background);
+    cursor: pointer;
+    position: relative;
+    min-height: 3.5rem;
+    transition: border-color 0.15s;
+}
+
+.taskboard-card-advanced:hover {
+    border-color: var(--p-taskboard-drop-indicator-color);
+}
+
+.taskboard-card-advanced-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-right: 2rem;
+}
+
+.taskboard-card-advanced-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.125rem;
+    line-height: 1.4;
+}
+
+.taskboard-card-advanced-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--p-taskboard-color);
+    line-height: 1.4;
+    padding-right: 2rem;
+}
+
+.taskboard-card-advanced-edit {
+    position: absolute !important;
+    top: 0.375rem;
+    right: 0.375rem;
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+    padding: 0 !important;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.taskboard-card-advanced:hover .taskboard-card-advanced-edit,
+.taskboard-card-advanced:focus-within .taskboard-card-advanced-edit {
+    opacity: 1;
+}
+
+@media (pointer: coarse) {
+    .taskboard-card-advanced-edit {
+        opacity: 1;
+    }
+}
+
+.taskboard-card-advanced-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.taskboard-card-advanced-priority {
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+}
+
+.taskboard-card-advanced-subtasks {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--p-taskboard-empty-color);
+}
+
+.taskboard-card-advanced-desc-icon {
+    display: flex;
+    align-items: center;
+    color: var(--p-taskboard-empty-color);
+}
+
+.taskboard-card-advanced-due {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--p-taskboard-empty-color);
+}
+
+.taskboard-card-advanced-due-overdue {
+    color: var(--p-taskboard-column-status-blocked-color);
+}
+
+.taskboard-card-advanced-avatar {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    font-size: 0.6rem !important;
+    font-weight: 600;
+}
