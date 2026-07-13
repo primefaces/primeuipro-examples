@@ -4,16 +4,14 @@ Quickstarts for building data visualizations with PrimeUI Pro Charts.
 
 [Read the Vue Charts documentation](https://vue.primeuipro.dev/charts).
 
-## Availability
+## Available Quickstarts
 
-There are no runnable Charts quickstarts in this repository yet.
+- [Vite quickstart](./vue/vite-quickstart) - Bar, line, and pie charts with the SVG renderer and the PrimeOne theme
+- [Nuxt quickstart](./vue/nuxt-quickstart) - Bar, line, and pie charts with the SVG renderer and the PrimeOne theme
 
-The planned Vue applications are:
+The Charts component renders from design tokens and looks the same with or without a Prime UI library, so these quickstarts cover the Vite and Nuxt setups without separate Tailwind variants.
 
-- `vue/vite-quickstart`
-- `vue/nuxt-quickstart`
-- `vue/vite-tailwind-quickstart`
-- `vue/nuxt-tailwind-quickstart`
+## Planned Quickstarts
 
 React quickstarts will use [PrimeReact](https://primereact.org/). Angular quickstarts will use [PrimeNG](https://primeng.org/). Their directories are placeholders until runnable examples are added.
 

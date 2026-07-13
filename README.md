@@ -11,7 +11,7 @@ Each quickstart is a standalone application with one focused component example a
 | [Scheduler](./scheduler) | [Vite](./scheduler/vue/vite-quickstart), [Nuxt](./scheduler/vue/nuxt-quickstart), [Vite + Tailwind](./scheduler/vue/vite-tailwind-quickstart), [Nuxt + Tailwind](./scheduler/vue/nuxt-tailwind-quickstart) | Planned | Planned |
 | [TextEditor](./texteditor) | Planned | Planned | Planned |
 | [TaskBoard](./taskboard) | [Vite](./taskboard/vue/vite-quickstart), [Nuxt](./taskboard/vue/nuxt-quickstart), [Vite + Tailwind](./taskboard/vue/vite-tailwind-quickstart), [Nuxt + Tailwind](./taskboard/vue/nuxt-tailwind-quickstart) | Planned | Planned |
-| [Charts](./chart) | Planned | Planned | Planned |
+| [Charts](./chart) | [Vite](./chart/vue/vite-quickstart), [Nuxt](./chart/vue/nuxt-quickstart) | Planned | Planned |
 
 The React and Angular directories are placeholders for upcoming framework examples. Future React quickstarts will use [PrimeReact](https://primereact.org/), and future Angular quickstarts will use [PrimeNG](https://primeng.org/) as their framework UI baselines. A folder is listed as available only when it contains a runnable application and its own README.
 
