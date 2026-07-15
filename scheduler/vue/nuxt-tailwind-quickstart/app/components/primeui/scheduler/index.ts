@@ -2,7 +2,7 @@ export { default as SchedulerAllDayEventUI } from './event/SchedulerAllDayEventU
 export { default as SchedulerMonthEventUI } from './event/SchedulerMonthEventUI.vue';
 export { default as SchedulerTimeGridEventUI } from './event/SchedulerTimeGridEventUI.vue';
 export { default as SchedulerTimelineEventUI } from './event/SchedulerTimelineEventUI.vue';
-export { default as SchedulerEventPopoverActions } from './overlay/SchedulerEventPopoverActions.vue';
+export { default as SchedulerEventPopoverUI } from './overlay/SchedulerEventPopoverUI.vue';
 export { default as SchedulerResourceAggregateBadgeUI } from './resource/SchedulerResourceAggregateBadgeUI.vue';
 export { default as SchedulerResourceColumnHeaderUI } from './resource/SchedulerResourceColumnHeaderUI.vue';
 export { default as SchedulerResourceHeaderUI } from './resource/SchedulerResourceHeaderUI.vue';

@@ -10,7 +10,7 @@ import Button from 'primevue/button';
 import { ref } from 'vue';
 import {
     SchedulerAllDayEventUI,
-    SchedulerEventPopoverActions,
+    SchedulerEventPopoverUI,
     SchedulerMonthEventUI,
     SchedulerResourceAggregateBadgeUI,
     SchedulerResourceColumnHeaderUI,
@@ -42,11 +42,6 @@ function onDateChange(value: Date) {
 
 function openCreateDialog() {
     editingEvent.value = null;
-    editorVisible.value = true;
-}
-
-function openEditDialog(event: SchedulerEvent) {
-    editingEvent.value = event;
     editorVisible.value = true;
 }
 
@@ -138,7 +133,7 @@ function onEventResizeStop(payload: EventResizeStopPayload) {
             <Scheduler.ResourceAggregateBadge><SchedulerResourceAggregateBadgeUI /></Scheduler.ResourceAggregateBadge>
         </Scheduler.Content>
         <Scheduler.Popover>
-            <SchedulerEventPopoverActions @edit="openEditDialog" @delete="deleteEvent" />
+            <SchedulerEventPopoverUI />
         </Scheduler.Popover>
     </Scheduler.Root>
 
