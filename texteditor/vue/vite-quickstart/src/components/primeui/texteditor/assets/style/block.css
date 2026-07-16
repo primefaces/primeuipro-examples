@@ -1,0 +1,36 @@
+/* Block Controls */
+.text-editor-block-controls-content {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+}
+
+.text-editor-block-add,
+.text-editor-block-drag-handle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    background: transparent;
+    border-radius: var(--p-text-editor-corner-radius);
+    cursor: pointer;
+    color: var(--p-text-editor-muted);
+    font-size: 1rem;
+    padding: 0;
+}
+
+.text-editor-block-add:hover,
+.text-editor-block-drag-handle:hover {
+    background: var(--p-text-editor-background-emphasis);
+    color: var(--p-text-editor-foreground);
+}
+
+.text-editor-block-drag-handle {
+    cursor: grab;
+}
+
+.text-editor-block-drag-handle:active {
+    cursor: grabbing;
+}

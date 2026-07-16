@@ -1,0 +1,38 @@
+.text-editor-table-control {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--p-text-editor-divider);
+    border-radius: var(--p-text-editor-corner-radius);
+    background: var(--p-text-editor-background);
+    color: var(--p-text-editor-muted);
+    box-shadow: var(--p-text-editor-overlay-shadow);
+    cursor: pointer;
+    z-index: 6;
+    transition:
+        background-color 0.15s,
+        color 0.15s,
+        opacity 0.15s;
+}
+
+.text-editor-table-control:hover {
+    background: var(--p-text-editor-background-emphasis);
+    color: var(--p-text-editor-foreground);
+}
+
+.text-editor-table-control-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.text-editor-table-control-enter-active,
+.text-editor-table-control-leave-active {
+    transition: opacity 0.15s;
+}
+
+.text-editor-table-control-enter-from,
+.text-editor-table-control-leave-to {
+    opacity: 0;
+}

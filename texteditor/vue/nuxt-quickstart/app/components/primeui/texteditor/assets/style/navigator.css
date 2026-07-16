@@ -1,0 +1,30 @@
+/* Navigator popover content */
+.text-editor-navigator-popover-content {
+    padding: 0.25rem;
+    min-width: 12rem;
+    max-width: 20rem;
+}
+
+.text-editor-navigator-popover-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border: 0;
+    border-radius: var(--p-text-editor-corner-radius);
+    background: transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: start;
+    color: var(--p-text-editor-foreground);
+}
+
+.text-editor-navigator-popover-item:hover {
+    background: var(--p-text-editor-background-emphasis);
+}
+
+.text-editor-navigator-popover-item-active {
+    color: var(--p-text-editor-accent);
+}

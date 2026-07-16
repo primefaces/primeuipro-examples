@@ -1,0 +1,91 @@
+/* Block Options Menu Items */
+.text-editor-menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0.25rem 0.25rem;
+}
+
+.text-editor-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.625rem;
+    background: transparent;
+    border-radius: var(--p-text-editor-corner-radius);
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--p-text-editor-foreground);
+}
+
+.text-editor-menu-item:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.text-editor-menu-item:hover,
+.text-editor-menu-item[data-p-focus] {
+    background: var(--p-text-editor-background-emphasis);
+    color: var(--p-text-editor-foreground-emphasis);
+}
+
+.text-editor-menu-item .text-editor-menu-item-icon,
+.text-editor-menu-item .text-editor-menu-item-submenu-icon {
+    color: var(--p-text-editor-muted);
+    flex-shrink: 0;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.text-editor-menu-item-submenu-icon,
+.text-editor-menu-item-check-icon {
+    margin-inline-start: auto;
+}
+
+[dir="rtl"] .text-editor-menu-item-submenu-icon {
+    transform: scaleX(-1);
+}
+
+.text-editor-menu-item-check-icon {
+    color: var(--p-text-editor-muted);
+    width: 0.75rem;
+    height: 0.75rem;
+    flex-shrink: 0;
+}
+
+.text-editor-menu-item:hover .text-editor-menu-item-icon,
+.text-editor-menu-item[data-p-focus] .text-editor-menu-item-icon,
+.text-editor-menu-item:hover .text-editor-menu-item-submenu-icon,
+.text-editor-menu-item[data-p-focus] .text-editor-menu-item-submenu-icon {
+    color: var(--p-text-editor-foreground);
+}
+
+.text-editor-menu-category {
+    display: block;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--p-text-editor-muted);
+}
+
+.text-editor-menu-separator {
+    display: block;
+    height: 1px;
+    background: var(--p-text-editor-divider);
+    margin: 0.25rem 0;
+}
+
+.text-editor-menu-category + .text-editor-menu-separator {
+    margin-top: 0;
+}
+
+.text-editor-menu-item-danger,
+.text-editor-menu-item-danger:hover {
+    color: var(--p-text-editor-danger);
+}
+
+.text-editor-menu-item-danger .text-editor-menu-item-icon,
+.text-editor-menu-item-danger:hover .text-editor-menu-item-icon {
+    color: var(--p-text-editor-danger);
+}
