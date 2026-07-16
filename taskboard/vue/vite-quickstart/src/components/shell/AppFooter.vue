@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Tag from 'primevue/tag';
 
-const taskBoardVersion = '1.0.0-rc.1';
+const taskBoardVersion = '1.0.0';
 </script>
 
 <template>

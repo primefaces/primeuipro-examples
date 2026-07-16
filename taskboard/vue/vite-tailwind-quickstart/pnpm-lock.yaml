@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       '@primeui/license-manager':
-        specifier: ^1.0.0-rc.1
-        version: 1.0.0-rc.2
+        specifier: ^1.0.0
+        version: 1.0.0
       '@primeui/taskboard-style':
-        specifier: 1.0.0-rc.1
-        version: 1.0.0-rc.1
+        specifier: 1.0.0
+        version: 1.0.0
       '@primeui/vue-taskboard':
-        specifier: 1.0.0-rc.1
-        version: 1.0.0-rc.1(vue@3.5.39(typescript@5.9.3))
+        specifier: 1.0.0
+        version: 1.0.0(vue@3.5.39(typescript@5.9.3))
       primeicons:
-        specifier: ^7.0.0
-        version: 7.0.0
+        specifier: ^8.0.0
+        version: 8.0.0
       vue:
         specifier: ^3.5.39
         version: 3.5.39(typescript@5.9.3)
@@ -240,28 +240,32 @@ packages:
   '@noble/ed25519@2.3.0':
     resolution: {integrity: sha512-M7dvXL2B92/M7dw9+gzuydL8qn/jiqNHaoR3Q+cb1q1GHV7uwE17WCyFMG+Y+TZb5izcaXk5TdJRrDUxHXL78A==}
 
-  '@primeui/core@1.0.0-rc.1':
-    resolution: {integrity: sha512-p+B/Wg0JAqgY4xRDqGjDEPQdlo/vidj2PEhWWfBi60hBDVnxugLwWq9+dFaHK2Fdd+ziVz6B6JiIO7W97wVxTQ==}
+  '@noble/hashes@2.2.0':
+    resolution: {integrity: sha512-IYqDGiTXab6FniAgnSdZwgWbomxpy9FtYvLKs7wCUs2a8RkITG+DFGO1DM9cr+E3/RgADRpFjrKVaJ1z6sjtEg==}
+    engines: {node: '>= 20.19.0'}
 
-  '@primeui/license-manager@1.0.0-rc.2':
-    resolution: {integrity: sha512-v85A+rsv+lNmfLjA7puZjaGHui+OTMDFMy9jmORHo1E0g+HOCewsLL7JXi8uI4BC2NtOdjbg4WFwCRi8soEw4g==}
+  '@primeui/core@1.0.0':
+    resolution: {integrity: sha512-3y2Se+duGkvH7ue5OVQc/qJRovgQMK97rWBiDRg1Ms/ShnjiKQSJt+X+GImWhyMk0r95c4ISQzS42fZNbzbZ5g==}
 
-  '@primeui/taskboard-core@1.0.0-rc.1':
-    resolution: {integrity: sha512-mSIWzy4VHFpCUvBPdQoyOiG7B3JZJApQQcPTIviACu5KU2IJxreqOmvtCqMqV+Ag0Z7qdGTxBbjuAYiEmeolfw==}
+  '@primeui/license-manager@1.0.0':
+    resolution: {integrity: sha512-89J7r8cclEqoHVwjOX1adPcB/blFSocpzuYlzmd+6r0gxzg2Vd4jM54TKXt9/qwAT/kOv4vYnHKZ6hcP2GFtfA==}
 
-  '@primeui/taskboard-style@1.0.0-rc.1':
-    resolution: {integrity: sha512-Pkuryth9QUgF4SfI2+jKuediKMNwdwvzjIeLII78JGplWUYuxE0XvPwUgWlwGVfhCwBFiCzBOtUkz2vAOACe8A==}
+  '@primeui/taskboard-core@1.0.0':
+    resolution: {integrity: sha512-0dVZdgHqJ1c0Ce0pRzC9sn9AV7iK3XsHVGz7IP8YtqSwmYwhI7+lqZ3TuLasPd6mLfeiLNB0ktW3Qn/qle1p1w==}
 
-  '@primeui/taskboard-types@1.0.0-rc.1':
-    resolution: {integrity: sha512-np3TO/s0k67hiCIALCuw3oQ5epLsP0riqmrQEBj8ITqg1cqdR4mGC/KJWSxxOsrt/tYC6IOm5TWDd0WX2njEIQ==}
+  '@primeui/taskboard-style@1.0.0':
+    resolution: {integrity: sha512-dFm4M3pWvgGHfcKk76qAPZNWWj3jWrOH5EkagJnCybdrOtWHAj5ZSNMCsPM8ATDomNMVCTlTuXsT1OxxXE7k8A==}
 
-  '@primeui/vue-taskboard@1.0.0-rc.1':
-    resolution: {integrity: sha512-bL573OsKT3BOGB4DvoDXTfOVVhEveCb1MzrZXCe17uqYeMZKqXmAi7849UpWQ5uH80CRwPNo8O5x+p2nz/gujA==}
+  '@primeui/taskboard-types@1.0.0':
+    resolution: {integrity: sha512-xW16yhMYi9bMeUU+VYGT8ofDIyMEy6j/x+1Afly4SmQRHASedq0xXnWAxadWih2VT1Q/hmgpxUXjwzNRFbB6Dw==}
+
+  '@primeui/vue-taskboard@1.0.0':
+    resolution: {integrity: sha512-OL93CZdC57S4AZScmx4Qzk9WmTahwUdxIUdPpgoRsWwCUcdzXLCfiW3vi86syEd43LKn5nqmyCfT78EkKhLsRQ==}
     peerDependencies:
       vue: ^3.5
 
-  '@primeuix/utils@0.7.2':
-    resolution: {integrity: sha512-pmEbSfP0Phf9W9RweiM66zXnkn73ZeKyYINElbX3uZ2+stzzaba2svLAl3B1pHVcRw5t43O0VciaGe4ye2EXKw==}
+  '@primeuix/utils@0.8.0':
+    resolution: {integrity: sha512-dZSMKU2XJ7W7VDLuFMS/o4k+QYw4SYIpqSNhR/jdasMaaXl8eq0Gt7fTzTwwq7hgfmfOsI6V5xtzUUIvybOJ/w==}
     engines: {node: '>=12.11.0'}
 
   '@rolldown/pluginutils@1.0.1':
@@ -678,8 +682,8 @@ packages:
     resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  primeicons@7.0.0:
-    resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
+  primeicons@8.0.0:
+    resolution: {integrity: sha512-eZGk+Mgb4fE+LkJi9LvllbnB4RVUF9kzmnLVnT3ZMY6stqKVh7TUJ0mFoMNIEgTnJSvhaGcJotDiSvtVvkHd7g==}
 
   rollup@4.62.2:
     resolution: {integrity: sha512-RFnrW4lhXA3s3eqHDZvN654g8OTjzRfqpIRJYczCGB6HzphckVAi/Qh4tbPUbRuDi7s1Llv8g/NspLkttY3gTA==}
@@ -880,34 +884,37 @@ snapshots:
 
   '@noble/ed25519@2.3.0': {}
 
-  '@primeui/core@1.0.0-rc.1':
-    dependencies:
-      '@primeuix/utils': 0.7.2
+  '@noble/hashes@2.2.0': {}
 
-  '@primeui/license-manager@1.0.0-rc.2':
+  '@primeui/core@1.0.0':
+    dependencies:
+      '@primeuix/utils': 0.8.0
+
+  '@primeui/license-manager@1.0.0':
     dependencies:
       '@noble/ed25519': 2.3.0
+      '@noble/hashes': 2.2.0
 
-  '@primeui/taskboard-core@1.0.0-rc.1':
+  '@primeui/taskboard-core@1.0.0':
     dependencies:
-      '@primeui/core': 1.0.0-rc.1
-      '@primeui/taskboard-types': 1.0.0-rc.1
+      '@primeui/core': 1.0.0
+      '@primeui/taskboard-types': 1.0.0
 
-  '@primeui/taskboard-style@1.0.0-rc.1': {}
+  '@primeui/taskboard-style@1.0.0': {}
 
-  '@primeui/taskboard-types@1.0.0-rc.1':
+  '@primeui/taskboard-types@1.0.0':
     dependencies:
-      '@primeui/core': 1.0.0-rc.1
+      '@primeui/core': 1.0.0
 
-  '@primeui/vue-taskboard@1.0.0-rc.1(vue@3.5.39(typescript@5.9.3))':
+  '@primeui/vue-taskboard@1.0.0(vue@3.5.39(typescript@5.9.3))':
     dependencies:
-      '@primeui/license-manager': 1.0.0-rc.2
-      '@primeui/taskboard-core': 1.0.0-rc.1
-      '@primeui/taskboard-style': 1.0.0-rc.1
-      '@primeui/taskboard-types': 1.0.0-rc.1
+      '@primeui/license-manager': 1.0.0
+      '@primeui/taskboard-core': 1.0.0
+      '@primeui/taskboard-style': 1.0.0
+      '@primeui/taskboard-types': 1.0.0
       vue: 3.5.39(typescript@5.9.3)
 
-  '@primeuix/utils@0.7.2': {}
+  '@primeuix/utils@0.8.0': {}
 
   '@rolldown/pluginutils@1.0.1': {}
 
@@ -1266,7 +1273,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  primeicons@7.0.0: {}
+  primeicons@8.0.0: {}
 
   rollup@4.62.2:
     dependencies:

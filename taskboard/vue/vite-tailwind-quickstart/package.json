@@ -11,10 +11,10 @@
         "typecheck": "vue-tsc --noEmit"
     },
     "dependencies": {
-        "@primeui/license-manager": "^1.0.0-rc.1",
-        "@primeui/taskboard-style": "1.0.0-rc.1",
-        "@primeui/vue-taskboard": "1.0.0-rc.1",
-        "primeicons": "^7.0.0",
+        "@primeui/license-manager": "^1.0.0",
+        "@primeui/taskboard-style": "1.0.0",
+        "@primeui/vue-taskboard": "1.0.0",
+        "primeicons": "^8.0.0",
         "vue": "^3.5.39"
     },
     "devDependencies": {
